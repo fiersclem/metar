@@ -1,0 +1,48 @@
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 50px;
+    margin-left: 25px;
+    }
+    
+    .lfpg { grid-area: 1 / 1 / 2 / 2; }
+    .lfpo { grid-area: 1 / 2 / 2 / 3; }
+    .lfbd { grid-area: 1 / 3 / 2 / 4; }
+    .lfmn { grid-area: 1 / 4 / 2 / 5; }
+    .lfbo { grid-area: 2 / 1 / 3 / 2; }
+    .uuee { grid-area: 2 / 2 / 3 / 3; }
+    .div7 { grid-area: 2 / 3 / 3 / 4; }
+    .div8 { grid-area: 2 / 4 / 3 / 5; }
+    .div9 { grid-area: 3 / 1 / 4 / 2; }
+    .div10 { grid-area: 3 / 2 / 4 / 3; }
+    .div11 { grid-area: 3 / 3 / 4 / 4; }
+    .div12 { grid-area: 3 / 4 / 4 / 5; }
+
+
+    .dark{
+        color: red;
+    }
+
+
+    #searchbar{
+        margin-left: 15%;
+        padding:15px;
+        border-radius: 10px;
+      }
+
+
+      input[type=text] {
+        width: 30%;
+        -webkit-transition: width 0.15s ease-in-out;
+        transition: width 0.15s ease-in-out;
+     }
+
+
+     input[type=text]:focus {
+        width: 70%;
+      }
+
+
+      
