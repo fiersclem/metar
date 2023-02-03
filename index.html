@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./styles_light.css" id="theme-link">
     <link rel="icon" href="./assets/plane.jfif" type="image/x-icon"/>
@@ -15,40 +18,12 @@
         <h1 class="text-center dark">metar favoris</h1>
         <a id="theme"></a>
         <input id="searchbar" onkeyup="search_icao()" type="text"
-        name="search" placeholder="Search ICAO or airports...">
+        name="search" placeholder="Search ICAO">
     </header>
     <main id="list">
-        <div class="lfpg dark icao text-center">
-            <h1>LFPG</h1>
-            <a href="https://metar-taf.com/fr/LFPG" id="metartaf-yq7Q1LFx" style="font-size:18px; font-weight:500; color:rgb(255, 0, 0); width:280px; height:435px; display:block">METAR Aéroport Paris–Charles de Gaulle</a>
-            <script async defer crossorigin="anonymous" src="https://metar-taf.com/fr/embed-js/LFPG?target=yq7Q1LFx"></script>
-        </div>
-        <div class="lfpo dark icao text-center">
-            <h1>LFPO</h1>
-            <a href="https://metar-taf.com/fr/LFPO" id="metartaf-G2i3ImCt" style="font-size:18px; font-weight:500; color:rgb(255, 0, 0); width:280px; height:435px; display:block">METAR Aéroport de Paris–Orly</a>
-            <script async defer crossorigin="anonymous" src="https://metar-taf.com/fr/embed-js/LFPO?target=G2i3ImCt"></script>
-        </div>
-        <div class="lfbd dark icao text-center">
-            <h1>LFBD</h1>
-            <a href="https://metar-taf.com/fr/LFBD" id="metartaf-kYRytnE7" style="font-size:18px; font-weight:500; color:rgb(255, 0, 0); width:280px; height:435px; display:block">METAR Aéroport de Bordeaux–Mérignac</a>
-            <script async defer crossorigin="anonymous" src="https://metar-taf.com/fr/embed-js/LFBD?target=kYRytnE7"></script>
-        </div>
-        <div class="lfmn dark icao text-center">
-            <h1>LFMN</h1>
-            <a href="https://metar-taf.com/fr/LFMN" id="metartaf-cRv5Iz9x" style="font-size:18px; font-weight:500; color:rgb(255, 0, 0); width:280px; height:435px; display:block">METAR Aéroport de Nice Côte d&#039;Azur</a>
-            <script async defer crossorigin="anonymous" src="https://metar-taf.com/fr/embed-js/LFMN?target=cRv5Iz9x"></script>
-        </div>
-        <div class="lfbo dark icao text-center">
-            <h1>LFBO</h1>
-            <a href="https://metar-taf.com/fr/LFBO" id="metartaf-ElxGwqOq" style="font-size:18px; font-weight:500; color:rgb(255, 0, 0); width:280px; height:435px; display:block">METAR Aéroport de Toulouse-Blagnac</a>
-            <script async defer crossorigin="anonymous" src="https://metar-taf.com/fr/embed-js/LFBO?target=ElxGwqOq"></script>
-        </div>
-        <div class="uuee dark icao text-center">
-            <h1>UUEE</h1>
-            <a href="https://metar-taf.com/fr/UUEE" id="metartaf-bqC2Gaxw" style="font-size:18px; font-weight:500; color:rgb(255, 0, 0); width:280px; height:435px; display:block">METAR Aéroport de Moscou-Cheremetievo</a>
-            <script async defer crossorigin="anonymous" src="https://metar-taf.com/fr/embed-js/UUEE?target=bqC2Gaxw"></script>
-        </div>
+            <section class="dark">
+                
+            </section>
     </main>
-    <script src="./script.js"></script>
 </body>
 </html>
