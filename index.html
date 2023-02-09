@@ -20,13 +20,17 @@
         </div>
         <h1 class="text-center dark titlee">METAR</h1>
         <div class="barre">
-            <a id="theme"></a>
-            <input id="searchbar" onkeyup="search_icao()" type="text" name="search" placeholder="Search ICAO">
             <div class="vue">
                 <h4>Vue pilote</h4>
-                <a id="test"></a>
+                <a id="switch"></a>
                 <h4>Vue classique</h4>
             </div>
+            <div class="test">
+                <input id="searchbar" onkeyup="search_icao()" type="text" name="search" placeholder="Search ICAO">
+                <div id="airportsList"></div>
+            </div>
+            <a id="map"></a>
+            <a id="theme"></a>
         </div>
     </header>
     <main>
