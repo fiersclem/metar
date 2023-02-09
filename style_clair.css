@@ -1,3 +1,26 @@
-body{
-    background-color: white;
+h1{
+    color:rgb(0, 0, 0);
+  }
+
+  h4{
+    color: rgb(0, 0, 0);
+  }
+
+  .dark{
+    color: rgb(0, 0, 0);
 }
+
+.star{
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+}
+
+
+.apprb{
+  color: rgb(255, 0, 0);
+}
+
+.infob {
+  color: rgb(0, 0, 0);
+  }
