@@ -28,9 +28,9 @@ window.onload = () => {
    
     if(localStorage.theme != null){
         themeLink.href = `style_${localStorage.theme}.css`
-        image.innerHTML=`<img src="./assets/${localStorage.theme}.svg " height="60px">`
-        background.innerHTML=`<img src="./assets/${localStorage.background}.png" width="100%" class="background">`
-        map.innerHTML=`<img src="./assets/${localStorage.map}.png" height="60px">`
+        image.innerHTML=`<img src="./assets/${localStorage.theme}.svg " height="60px" alt="changer de thème">`
+        background.innerHTML=`<img src="./assets/${localStorage.background}.png" width="100%" class="background" alt="image thème">`
+        map.innerHTML=`<img src="./assets/${localStorage.map}.png" height="60px" alt="choisir un itinéraire">`
     }else{
         themeLink.href = "style_clair.css"
         image.innerHTML=`<img src="./assets/clair.svg " height="60px">`
@@ -52,18 +52,18 @@ window.onload = () => {
             localStorage.map="itinéraire"
         }
         themeLink.href = `style_${localStorage.theme}.css`
-        image.innerHTML=`<img src="./assets/${localStorage.theme}.svg " height="60px">`
-        background.innerHTML=`<img src="./assets/${localStorage.background}.png" width="100%" class="background">`
-        map.innerHTML=`<img src="./assets/${localStorage.map}.png" height="60px">`
+        image.innerHTML=`<img src="./assets/${localStorage.theme}.svg " height="60px" alt="changer de thème">`
+        background.innerHTML=`<img src="./assets/${localStorage.background}.png" width="100%" class="background" alt="image thème">`
+        map.innerHTML=`<img src="./assets/${localStorage.map}.png" height="60px" alt="choisir un itinéraire">`
     })
 
 //--------------------------vue
     let switchh =document.getElementById("switch")
 
     if(localStorage.switch != null){
-        switchh.innerHTML=`<img src="./assets/${localStorage.switch}.png " height="40px">`
+        switchh.innerHTML=`<img src="./assets/${localStorage.switch}.png " height="40px" alt="changer la visualisation des données">`
     }else{
-        switchh.innerHTML=`<img src="./assets/vert.png " height="50px">`
+        switchh.innerHTML=`<img src="./assets/vert.png " height="50px" alt="vue pilote">`
         localStorage.switch = "vert"
     }
     
@@ -79,7 +79,7 @@ window.onload = () => {
                 writev();
             }
         }
-        switchh.innerHTML=`<img src="./assets/${localStorage.switch}.png " height="40px">`
+        switchh.innerHTML=`<img src="./assets/${localStorage.switch}.png " height="40px" alt="changer visualisation des données">`
     })
 
     list=document.getElementById("list")
@@ -89,7 +89,7 @@ window.onload = () => {
             list.innerHTML=`<div class="map">
             <input id="searchbard" type="text" name="search" placeholder="Search ICAO Departure">
             <input id="searchbara" type="text" name="search" placeholder="Search ICAO Arrival">
-            <button style="position: relative; z-index: 2;"id="button">clique ici</button>
+            <button style="position: relative; z-index: 2;"id="button">Calculer la distance</button>
             <p id="km"></p>
         </div>
         `
@@ -98,13 +98,12 @@ window.onload = () => {
             list.innerHTML=``
     
         }
-        map.innerHTML=`<img src="./assets/${localStorage.map}.png" height="60px">`
+        map.innerHTML=`<img src="./assets/${localStorage.map}.png" height="60px" alt="choisir un itinéraire">`
         document.getElementById("button").addEventListener("click", function(){
             getDistance()
         
            })
     })
-
 }
 
 
@@ -149,7 +148,7 @@ async function getAirportData(icao) {
      distance = Math.round(radius * c);
   
     // Affiche la distance entre les deux aéroports
-    document.getElementById("km").innerHTML=`La distance entre les aéroports ${icao1} et ${icao2} est de ${distance} km.`
+    document.getElementById("km").innerHTML=`La distance entre l'aéroport ${icao1} et ${icao2} est de ${distance} km.`
   }
   
 
@@ -222,10 +221,10 @@ function writev(){
             </div>
             <div style="position:relative; height:250px">
                 <div style="position:absolute;z-index:1" class="instru">
-                    <img src="./assets/mcdu.png" height=250px class="instru1">
-                    <img src="./assets/qnh hpa.png"  height=250px class="instru2">
-                    <img src="./assets/qnh hg.png"  height=250px class="instru3">
-                    <img src="./assets/baro.png"  height=250px class="instru4">
+                    <img src="./assets/mcdu.png" height=250px class="instru1" alt="données du FMC">
+                    <img src="./assets/qnh hpa.png"  height=250px class="instru2" alt="QNH (pression barométrique en hPa">
+                    <img src="./assets/qnh hg.png"  height=250px class="instru3" alt="QNH (pression barométrique en hg">
+                    <img src="./assets/baro.png"  height=250px class="instru4" alt="QNH (pression barométrique en hPa dans le badin">
                 </div>
                 <div style="position:absolute; width:600px; height:400px; z-index:2;">
                     <center><p class="appr qnh">${qnh_hpa}</p></center>
