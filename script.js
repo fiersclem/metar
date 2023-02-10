@@ -146,7 +146,7 @@ async function getAirportData(icao) {
         Math.sin(dLon / 2) *
         Math.sin(dLon / 2);
      c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-     distance = radius * c;
+     distance = Math.round(radius * c);
   
     // Affiche la distance entre les deux aéroports
     document.getElementById("km").innerHTML=`La distance entre les aéroports ${icao1} et ${icao2} est de ${distance} km.`
